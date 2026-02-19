@@ -173,11 +173,13 @@ export default function MainboardIpoTable() {
         {ipoData.map((ipo, index) => (
           <div
             key={index}
-
-            className="border rounded-xl p-4 shadow-sm transition-all duration-300 md:hover:shadow-lg md:hover:ring-2 md:hover:ring-yellow-300"
+            style={{ zIndex: 9999 }}
+            className=" relative border rounded-xl p-4 shadow-sm transition-all duration-300 md:hover:shadow-lg md:hover:ring-2 md:hover:ring-yellow-300"
 
             // className="border rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-lg hover:ring-2 hover:ring-yellow-300"
           >
+
+    
             <Link
   href="/abc"
   className="block font-semibold text-gray-900 mb-2"
