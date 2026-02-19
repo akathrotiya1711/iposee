@@ -58,8 +58,9 @@ const ipoData: IPO[] = [
 
 export default function MainboardIpoTable() {
   return (
-    <section className="bg-white rounded-xl p-6 md:p-10 shadow-md max-w-7xl mx-auto mt-12 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-      
+    // <section className="bg-white rounded-xl p-6 md:p-10 shadow-md max-w-7xl mx-auto mt-12 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+       <section className="bg-white rounded-xl p-6 md:p-10 shadow-md max-w-7xl mx-auto mt-12 transition-all duration-300 md:hover:shadow-xl md:hover:scale-[1.02]">
+
       {/* Header */}
       <div className="flex items-center justify-center gap-2 mb-8">
         <TrendingUp className="text-yellow-600" size={22} />
@@ -172,11 +173,17 @@ export default function MainboardIpoTable() {
         {ipoData.map((ipo, index) => (
           <div
             key={index}
-            className="border rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-lg hover:ring-2 hover:ring-yellow-300"
+
+            className="border rounded-xl p-4 shadow-sm transition-all duration-300 md:hover:shadow-lg md:hover:ring-2 md:hover:ring-yellow-300"
+
+            // className="border rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-lg hover:ring-2 hover:ring-yellow-300"
           >
-            <div className="font-semibold text-gray-900 mb-2">
-              {ipo.name}
-            </div>
+            <Link
+  href="/abc"
+  className="block font-semibold text-gray-900 mb-2"
+>
+  {ipo.name}
+</Link>
 
             <div className="flex justify-between text-sm mb-1">
               <span>GMP</span>
